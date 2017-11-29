@@ -237,7 +237,6 @@ fabric.properties
 ### https://raw.github.com/github/gitignore/055194192edb9ace9bedf5e6bf6e49f6ab824c6e/Go.gitignore
 
 # Binaries for programs and plugins
-*.exe
 *.dll
 *.so
 *.dylib
