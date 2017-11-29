@@ -40,6 +40,7 @@ func DataHandler(w http.ResponseWriter, req *http.Request) {
 		return
 	}
 
+	w.Header().Add("Content-Type", "application/json")
 	io.WriteString(w, string(content))
 }
 
