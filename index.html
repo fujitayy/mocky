@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>Test</title>
+        <style>
+#user-comments {
+    width: 45em;
+    margin: 100px auto;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    min-height: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-comment {
+    width: calc(100% - 60px * 1.618);
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.user-comment:not(:first-of-type) {
+    border-top: 1px solid #dddddd;
+}
+.user-comment > .first-name {
+    flex-grow: 0;
+    margin-right: .4em;
+}
+.user-comment > .last-name {
+    flex-grow: 0;
+}
+.user-comment > .date {
+    flex-grow: 1;
+    text-align: right;
+    color: #999999;
+}
+.user-comment > .comment {
+    min-width: 100%;
+    padding: .618em;
+}
+        </style>
+    </head>
+    <body>
+        <div id="user-comments">
+            <div class="user-comment">
+                <div class="first-name">山田</div>
+                <div class="last-name">太郎</div>
+                <div class="date">2017-01-01T12:34:56+0900</div>
+                <div class="comment">
+                    これはコメント部分のDOMの見本です。<br>
+                    サーバーから取得したデータをこの形でページ上に表示して下さい。<br>
+                    取得するデータは下記の3つです。<br>
+                    <br>
+                    ・/data/comments_1.json<br>
+                    ・/data/comments_2.json<br>
+                    ・/data/comments_3.json<br>
+                    <br>
+                    ※改行を&lt;br&gt;に変換する機能の実装は不要ですが、表示がおかしくならないように注意して下さい。
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </body>
+</html>
